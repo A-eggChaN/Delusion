@@ -6,25 +6,25 @@ import java.util.Scanner;
  */
 public class Main {
 	public static void doJu(int a,String b){ //判断方法
-			String[] c = {null,"石头","剪刀","布"};
-			System.out.println(b+"出了"+c[a]);
+			String[] c = {null,"石头","剪刀","布"}; //数组顺序
+			System.out.println(b+"出了"+c[a]); //取顺序
 	}
 	public static void main(String[] args) {
-		double ver = 0.50;		
+		double ver = 0.50; //版本号		
 			System.out.println("石头剪刀布ver"+ver+'\n'+"by A_eggChaN"+'\n'+"输入数字123，bot随机");
-			Scanner in = new Scanner(System.in);
+			Scanner in = new Scanner(System.in); //键盘输入
 			int A1 = in.nextInt(); //用户输入
 			int bot = (int)Math.round(2*Math.random()+1); //随机bot
 			doJu(A1,"玩家"); //判断用户print
 			doJu(bot,"电脑"); //判断bot print
-			if(A1 == bot){
+			if(A1 == bot){ //排除平局
 				System.out.println("平局了熬");
-			}else{
+			}else{ //顺序判断
 				A1 = (A1+1)%3;
 				bot = bot%3;
-			if(A1==bot) {
+			if(A1==bot) { 
 				System.out.println("赢了");
-			}else {
+			}else { //反选
 					System.out.println("输了");
 				}
 			}
